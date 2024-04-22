@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Engineering</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/B-B.png" alt="Your Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="tabs">
+    <button class="tablinks" onclick="openTab('cybersecurity.html')">Cyber Security</button>
+    <button class="tablinks" onclick="openTab('network-engineer.html')">Network Engineers</button>
+    <button class="tablinks" onclick="openTab('Technical-support.html')">Technical Support</button>
+    <button class="tablinks" onclick="openTab('data-analysis.html')">Data Analyst</button>
+  </div>
+
+  <div class="cyber-info">
+    <h1>What to know about Network Engineering</h1><br>
+  </div>
+
+  <div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="images/resixzed 4.jpg" style="width:70%" height="auto">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/resized 3.jpg" style="width:70%" height="auto">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/resized5667.jpg" style="width:70%" height="auto">
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>What is a Network Engineer?</h2><br>
+      <p>Network security encompasses the set of practices, tools, and policies that network engineers use to protect the integrity, confidentiality, and availability of data and resources within a network. The primary goal of network security is to prevent unauthorized access to or misuse of network resources.
+        The landscape of network security has evolved significantly over time. Basic perimeter defenses, such as firewalls, are no longer sufficient to protect against modern cyber threats. Network engineers now employ a variety of tools and techniques, such as intrusion detection systems (IDS), encryption, and multi-factor authentication, to secure networks against unauthorized access and data breaches.
+        In today's interconnected world, where cyber threats are constantly evolving, network security is a critical aspect of any organization's IT infrastructure. It is essential for ensuring the secure and reliable operation of networks, protecting sensitive information, and maintaining the trust of customers and stakeholders.
+      </p>
+    </div>
+
+    <div class="contain">
+      <h1>Make your Request <span>NOW</span> !!!!</h1>
+      <div class="service2">
+        <img src="images/networks.png" alt="networks">
+        <h2>network installation and configuration</h2>
+        <button onclick="purchase('network installation and configuration')">Request</button>
+      </div>
+      <div class="service2">
+        <img src="images/networks.png" alt="networks">
+        <h2>Networks Troubleshooting And Maintenance</h2>
+        <button onclick="purchase('Networks Troubleshooting And Maintenance')">Request</button>
+      </div>
+      <div class="service2">
+        <img src="images/networks.png">
+        <h2>Network security services</h2>
+        <button onclick="purchase('Network security services')">Request</button>
+      </div>
+      <div class="service2">
+        <img src="images/networks.png" alt="networks">
+        <h2>Network upgrades and expansion</h2>
+        <button onclick="purchase('Network upgrades and expansion')">Request</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function purchase(service) {
+      let message;
+      // Check the service name and set the message accordingly
+      switch(service) {
+          case "network installation and configuration":
+              message = "You have requested for network installation and configuration. Our team will contact you shortly.";
+              break;
+          case 'Networks Troubleshooting And Maintenance':
+              message = "You have requested for network troubleshooting and maintenance. Our team will contact you shortly.";
+              break;
+          case 'Network security services':
+              message = "You have requested for security services. Our team will contact you shortly.";
+              break;
+          case 'Network upgrades and expansion':
+              message = "You have requested for network upgrades and expansions. Our team will contact you shortly.";
+              break;
+          default:
+              message = "You have requested a service. Our team will contact you shortly.";
+      }
+      // Display the message in an alert
+      alert(message);
+      // Redirect to the price list page
+      window.location.href = "price list.html";
+    }
+
+    var slideIndex = 0;
+
+    function showSlides() {
+      var slides = document.getElementsByClassName("mySlides");
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); 
+    }
+    showSlides(); 
+
+    function openTab(tabName) {
+      window.location.href = tabName;
+    }
+  </script>
+  
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, feel free to get in touch with us.</p>
+    <a href="contact.html" class="btn">Contact</a>
+  </div>
+
+  <footer>
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>Contact: info@binarybrains.com | Phone: 021-456-789</p>
+    <p>&copy; 2024 Binary Brains. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
